@@ -28,6 +28,7 @@ public class SnsLoginService {
     public void kakaoLogin(Map<String, String> params, HttpSession session) {
 
         String accessToken = getKakaoAccessToken(params);
+        session.setAttribute("access_token", accessToken);
         log.info("access_token: {}", accessToken);
 
         // 전달받은 액세스 토큰을 활용하여 사용자 정보를 가져오기.
