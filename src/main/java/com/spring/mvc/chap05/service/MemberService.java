@@ -112,6 +112,7 @@ public class MemberService {
                 .email(foundMember.getEmail())
                 .auth(foundMember.getAuth().getDescription())
                 .profile(foundMember.getProfileImage())
+                .loginMethod(foundMember.getLoginMethod().toString())
                 .build();
 
         // 세션에 로그인한 회원 정보를 저장
