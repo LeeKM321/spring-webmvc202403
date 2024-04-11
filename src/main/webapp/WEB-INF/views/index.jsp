@@ -4,10 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert Your Title</title>
+
+    <%@ include file="include/static-head.jsp" %>
+
 </head>
 <body>
 
-    <%
+    <%@ include file="include/header.jsp" %>
+
+    <%--
         String userName = "방문자";
 
         // 클라이언트에게 쿠키를 검사
@@ -17,10 +22,16 @@
                 userName = c.getValue();
             }
         }
-    %>
+    --%>
 
-    <h1><%= userName %> 님 안녕하세요!</h1>
-    
+    <c:if test="${login == null}">
+        <h1> 방문자님 안녕하세요!</h1>
+    </c:if>
+
+    <c:if test="${login != null}">
+        <h1> ${login.name}(${login.account})님 안녕하세요!</h1>
+    </c:if>
+
 </body>
 </html>
 
