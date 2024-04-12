@@ -140,6 +140,9 @@
                       required="required" aria-required="true"
                       style="margin-bottom: 25px; width: 100%; height: 40px; border: 1px solid #d9d9de"
                       placeholder="ex) abc@mvc.com"></td>
+                  <td>
+                    <button type="button">이메일 인증</button>
+                  </td>
                 </tr>
 
 
